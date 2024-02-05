@@ -28,6 +28,7 @@ namespace TestDemo.GameServices
                         {
                             Id = a.Id,
                             Name = a.Name,
+                            Version = a.Version,
                             IsActive = a.IsActive,
                         }).ToList();
             return Game;
@@ -48,6 +49,7 @@ namespace TestDemo.GameServices
                          {
                              Id = a.Id,
                              Name = a.Name,
+                             Version = a.Version,
                              IsActive = a.IsActive,
                          }).FirstOrDefault();
             return Games;
@@ -56,6 +58,7 @@ namespace TestDemo.GameServices
         {
             var Games = await _GameRepository.GetAsync(input.Id);
             Games.Name = input.Name;
+            Games.Version = input.Version;
             Games.IsActive = input.IsActive;
             await _GameRepository.UpdateAsync(Games);
         }

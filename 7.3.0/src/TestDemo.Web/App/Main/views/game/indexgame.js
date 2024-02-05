@@ -56,6 +56,7 @@
 
                 abp.message.confirm(
                     "Delete Test '" + item.name + "'?",
+                    //"Delete Test '" + item.version + "'?",
                     "Delete?",
                     function (result) {
                         if (result) {

@@ -15,6 +15,8 @@ namespace TestDemo.GameServices.Dto
        
         public virtual string Name { get; set; }
         public bool IsActive { get; set; }
+        public virtual string Version { get; set; }
+
     }
 }
 

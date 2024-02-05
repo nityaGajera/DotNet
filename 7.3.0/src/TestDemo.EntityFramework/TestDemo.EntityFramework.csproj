@@ -275,6 +275,10 @@
     <Compile Include="Migrations\202401310714444_nitya.designer.cs">
       <DependentUpon>202401310714444_nitya.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202402050528535_zyx.cs" />
+    <Compile Include="Migrations\202402050528535_zyx.designer.cs">
+      <DependentUpon>202402050528535_zyx.cs</DependentUpon>
+    </Compile>
     <Compile Include="TestDemoDataModule.cs" />
     <Compile Include="Migrations\201809270654064_InitialMigrations.cs" />
     <Compile Include="Migrations\201809270654064_InitialMigrations.Designer.cs">
@@ -428,6 +432,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202401310714444_nitya.resx">
       <DependentUpon>202401310714444_nitya.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202402050528535_zyx.resx">
+      <DependentUpon>202402050528535_zyx.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
