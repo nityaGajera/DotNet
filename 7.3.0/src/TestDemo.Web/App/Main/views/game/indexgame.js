@@ -4,13 +4,17 @@
         function ($scope, $timeout, $uibModal, gameService) {
             var vm = this;
             vm.game = [];
+           // vm.search = "";
             function getgame() {
-                gameService.getGameData().then(function (result) {
+                gameService.getGameData($scope.search).then(function (result) {
                     vm.game = result.data;
                     console.log(vm.game);
                 });
             }
 
+            $scope.searchBy = function () {
+                getgame();
+            }
             vm.opengameCreateGame = function () {
                 var modalInstance = $uibModal.open({
                     templateUrl: '/App/Main/views/game/CreateGame.cshtml',
@@ -70,20 +74,7 @@
                         }
                     });
             };
-            vm.delete = function (game) {
-                abp.message.confirm(
-                    "Delete game '" + game.name + "'?",
-                    "Delete",
-                    function (result) {
-                        if (result) {
-                            gameService.delete({ id: item.id })
-                                .then(function () {
-                                    abp.notify.info("Deleted game: " + t.name);
-                                    getgame();
-                                });
-                        }
-                    });
-            }
+         
 
 
             function init() {

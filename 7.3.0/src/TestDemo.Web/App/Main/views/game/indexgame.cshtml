@@ -8,23 +8,15 @@
                 <i class="fa fa-spin fa-spinner" ng-if="vm.isTableLoading"></i>
                 <ul class="header-dropdown m-r--5">
                     <li class="dropdown">
-                        <body ng-controller="searchController">
-
-                            <input type="text" ng-model="search" placeholder="Search...">
-                            <button ng-click="filterList()">Search</button>
-
-                            <ul>
-                                <li ng-repeat="name in nameList | filter:search">{{ name }}</li>
-                            </ul>
-                         </body>
-
-                            <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-                                <i class="material-icons">more_vert</i>
-                            </a>
-                            <ul class="dropdown-menu pull-right">
-                                <li><a href="javascript:void(0);" class="waves-effect waves-block()" ng-click="vm.refresh();"><i class="material-icons">refresh</i> @L("Refresh")</a></li>
-                            </ul>
-</li>
+                        <input type="text" ng-model="search" @*ng-change="nameList()"*@ placeholder="Search...">
+                        <button ng-click="nameList()">Search</button>
+                        <a class="dropdown-toggle" data-toggle="dropdown" role="button" ng-click="searchBy()" aria-haspopup="true" aria-expanded="false">
+                            <i class="material-icons">more_vert</i>
+                        </a>
+                        <ul class="dropdown-menu pull-right">
+                            <li><a href="javascript:void(0);" class="waves-effect waves-block()" ng-click="vm.refresh();"><i class="material-icons">refresh</i> @L("Refresh")</a></li>
+                        </ul>
+                    </li>
                 </ul>
             </div>
             <!-- ******************** -->
@@ -47,7 +39,7 @@
                             <td>{{t.name}}</td>
                             <td>{{t.version}}</td>
                             <td align="center">
-                                <i class="material-icons" ng-if="t.isActive" style="color:dodgerblue;">check_box</i>
+                                <i class="material-icons" ng-if="t.isActive" style="color:green;">check_box</i>
                                 <i class="material-icons" ng-if="!t.isActive" style="color:red;">indeterminate_check_box</i>
                             </td>
 

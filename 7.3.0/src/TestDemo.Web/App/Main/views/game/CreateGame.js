@@ -11,7 +11,7 @@
                     id: id
                 }).then(function (result) {
                     vm.game = result.data.items;
-                    /*console.log(vm.game);*/
+                    console.log(vm.game);
                 });
             }
             vm.save = function () {

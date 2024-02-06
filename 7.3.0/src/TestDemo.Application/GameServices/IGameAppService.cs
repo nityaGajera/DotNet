@@ -12,7 +12,7 @@ namespace TestDemo.GameServices
     public interface IGameAppService : IApplicationService
     {
         Task<GameDto> getGamebyid(EntityDto input);
-        List<GameDto> GetGameData();
+        List<GameDto> GetGameData(string search);
         Task CreateGame(CreateGameDto input);
         Task DeleteGame(EntityDto input);
         Task UpdateGame(CreateGameDto input);

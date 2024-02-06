@@ -1,6 +1,8 @@
 ﻿using Abp.Application.Services.Dto;
 using Abp.AutoMapper;
+using Abp.Collections.Extensions;
 using Abp.Domain.Repositories;
+using Abp.Extensions;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -21,7 +23,7 @@ namespace TestDemo.GameServices
         }
 
         //public IRepository<Game> GameRepository { get; }
-        public List<GameDto> GetGameData()
+        public List<GameDto> GetGameData(string search)
         {
             var Game = (from a in _GameRepository.GetAll()
                         select new GameDto
@@ -30,7 +32,9 @@ namespace TestDemo.GameServices
                             Name = a.Name,
                             Version = a.Version,
                             IsActive = a.IsActive,
-                        }).ToList();
+                        })
+                        .WhereIf(!search.IsNullOrEmpty(), x => x.Name.Contains(search))
+                        .ToList();
             return Game;
         }
 
