@@ -74,6 +74,24 @@
                         }
                     });
             };
+            vm.isActivedata = function (item) {
+                debugger;
+
+                abp.message.confirm(
+                    "IsActive Game '" + item.name + "'?",
+                    "Change the IsActive?",
+                    function (result) {
+                        if (result) {
+
+                            gameService.isActiveGame({ id: item.id })
+                                .then(function () {
+                                    abp.notify.info("IsActive Game is: " + item.name);
+                                    debugger;
+                                    getgame();
+                                });
+                        }
+                    });
+            };
          
 
 

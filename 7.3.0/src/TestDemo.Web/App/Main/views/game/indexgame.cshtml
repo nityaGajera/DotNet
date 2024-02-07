@@ -8,7 +8,7 @@
                 <i class="fa fa-spin fa-spinner" ng-if="vm.isTableLoading"></i>
                 <ul class="header-dropdown m-r--5">
                     <li class="dropdown">
-                        <input type="text" ng-model="search" @*ng-change="nameList()"*@ placeholder="Search...">
+                        <input type="text" ng-model="search" ng-change="nameList()" placeholder="Search...">
                         <button ng-click="nameList()">Search</button>
                         <a class="dropdown-toggle" data-toggle="dropdown" role="button" ng-click="searchBy()" aria-haspopup="true" aria-expanded="false">
                             <i class="material-icons">more_vert</i>
@@ -39,8 +39,8 @@
                             <td>{{t.name}}</td>
                             <td>{{t.version}}</td>
                             <td align="center">
-                                <i class="material-icons" ng-if="t.isActive" style="color:green;">check_box</i>
-                                <i class="material-icons" ng-if="!t.isActive" style="color:red;">indeterminate_check_box</i>
+                                <i class="material-icons" ng-click="vm.isActivedata(t)" ng-if="t.isActive" style="color:green;">check_box</i>
+                                <i class="material-icons" ng-click="vm.isActivedata(t)" ng-if="!t.isActive" style="color:red;">indeterminate_check_box</i>
                             </td>
 
                             <td class="dropdown">
