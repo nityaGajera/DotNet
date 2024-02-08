@@ -74,27 +74,36 @@
                         }
                     });
             };
-            vm.isActivedata = function (item) {
-                debugger;
+          
 
+            //vm.isActivedata = function (item) {
+            //    abp.message.confirm(
+            //        "Change Status of this Game ?",
+            //        "Are You Sure",
+            //        function (result) {
+            //            gameService.changeStatus({ id: item.id })
+            //                .then(function () {
+            //                    abp.notify.info("Changed Item: " + item.name);
+            //                    getgame();
+            //                });
+
+            //        });
+            //}
+            vm.isActivedata = function (item) {
                 abp.message.confirm(
-                    "IsActive Game '" + item.name + "'?",
-                    "Change the IsActive?",
+                    "Change Status of this Game ?",
+                    "Are You Sure",
                     function (result) {
                         if (result) {
-
-                            gameService.isActiveGame({ id: item.id })
+                            gameService.changeStatus({ id: item.id })
                                 .then(function () {
-                                    abp.notify.info("IsActive Game is: " + item.name);
-                                    debugger;
+                                    abp.notify.info("Changed Item: " + item.name);
                                     getgame();
                                 });
                         }
                     });
-            };
+            }
          
-
-
             function init() {
                 getgame();
             }

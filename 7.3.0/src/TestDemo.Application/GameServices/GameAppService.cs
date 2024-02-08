@@ -16,6 +16,7 @@ namespace TestDemo.GameServices
     public class GameAppService : TestDemoApplicationModule, IGameAppService
     {
         private readonly IRepository<game> _GameRepository;
+        private object _Gamerepository;
 
         public GameAppService(IRepository<game> GameRepository)
         {
@@ -66,24 +67,24 @@ namespace TestDemo.GameServices
             Games.IsActive = input.IsActive;
             await _GameRepository.UpdateAsync(Games);
         }
-        public async Task GetActiveStatus(CreateGameDto input)
-        {
-            var status = await _GameRepository.GetAsync(input.Id);
-            if (status.IsActive == true)
-            {
-                var active = _GameRepository.GetAll().Where(x => x.IsActive == false).ToList();
-            }
-            else
-            {
-                var inActive = _GameRepository.GetAll().Where(x => x.IsActive == true).ToList();
-            }
-        }
-        //public async task isactivegame(creategamedto input)
+        //public async Task GetActiveStatus(CreateGameDto input)
         //{
-        //    var games = await _gamerepository.getasync(input.id);
-        //    games.isactive = !input.isactive;
-        //    await _gamerepository.updateasync(games);
+        //    var games = await _GameRepository.GetAsync(input.Id);
+        //    if (games.IsActive == true)
+        //    {
+        //        var active = _GameRepository.GetAll().Where(x => x.IsActive == false).ToList();
+        //    }
+        //    else
+        //    {
+        //        var inActive = _GameRepository.GetAll().Where(x => x.IsActive == true).ToList();
+        //    }
         //}
+        public async Task ChangeStatus(EntityDto input)
+        {
+            var games = await _GameRepository.GetAsync(input.Id);
+            games.IsActive = !games.IsActive;
+            await _GameRepository.UpdateAsync(games);
+        }
         public async Task DeleteGame(EntityDto input)
         {
             await _GameRepository.DeleteAsync(input.Id);

@@ -16,6 +16,6 @@ namespace TestDemo.GameServices
         Task CreateGame(CreateGameDto input);
         Task DeleteGame(EntityDto input);
         Task UpdateGame(CreateGameDto input);
-        Task GetActiveStatus(CreateGameDto input);
+        Task ChangeStatus(EntityDto input);
     }
 }
