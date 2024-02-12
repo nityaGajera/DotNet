@@ -13,6 +13,7 @@ namespace TestDemo.GameServices
     {
         Task<GameDto> getGamebyid(EntityDto input);
         List<GameDto> GetGameData(string search);
+        List<GameDto> GetPermissionData();
         Task CreateGame(CreateGameDto input);
         Task DeleteGame(EntityDto input);
         Task UpdateGame(CreateGameDto input);

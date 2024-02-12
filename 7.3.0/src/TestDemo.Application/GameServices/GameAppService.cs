@@ -3,10 +3,8 @@ using Abp.AutoMapper;
 using Abp.Collections.Extensions;
 using Abp.Domain.Repositories;
 using Abp.Extensions;
-using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 using TestDemo.Games;
 using TestDemo.GameServices.Dto;
@@ -36,9 +34,20 @@ namespace TestDemo.GameServices
                         })
                         .WhereIf(!search.IsNullOrEmpty(), x => x.Name.Contains(search))
                         .ToList();
+
             return Game;
         }
-
+        public List<GameDto> GetPermissionData()
+        {
+            var Game = (from a in _GameRepository.GetAll()
+                        select new GameDto
+                        {
+                            Id = a.Id,
+                            Name = a.Name,
+                        })
+                        .ToList();
+               return Game;
+        }
         public async Task CreateGame(CreateGameDto input)
         {
             var Game = input.MapTo<game>();

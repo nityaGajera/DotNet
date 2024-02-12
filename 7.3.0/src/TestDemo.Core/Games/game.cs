@@ -14,6 +14,11 @@ namespace TestDemo.Games
         public virtual bool IsActive { get; set; }
         public virtual string Name { get; set; }
         public virtual string Version { get; set; }
+
+        public IEnumerable<object> GetAllPermissions()
+        {
+            throw new NotImplementedException();
+        }
     }
 
 }
