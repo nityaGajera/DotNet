@@ -65,6 +65,11 @@
                     url: '/game',
                     templateUrl: '/App/Main/views/game/indexgame.cshtml',
                     menu: 'Game' //Matches to name of 'About' menu in TestDemoNavigationProvider
+                })
+                .state('Department', {
+                    url: '/department',
+                    templateUrl: '/App/Main/views/department/indexd.cshtml',
+                    menu: 'Department' //Matches to name of 'About' menu in TestDemoNavigationProvider
                 });
         }
     ]);

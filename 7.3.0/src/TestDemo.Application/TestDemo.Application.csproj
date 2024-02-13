@@ -250,6 +250,10 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Department\DepartmentAppService.cs" />
+    <Compile Include="Department\Dto\CreateDepartmentDto.cs" />
+    <Compile Include="Department\Dto\DepartmentDto.cs" />
+    <Compile Include="Department\IDepartmentAppService.cs" />
     <Compile Include="GameServices\Dto\CreateGameDto.cs" />
     <Compile Include="GameServices\Dto\GameDto.cs" />
     <Compile Include="GameServices\GameAppService.cs" />

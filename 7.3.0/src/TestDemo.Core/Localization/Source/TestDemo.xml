@@ -78,6 +78,9 @@
     <text name="Delete">Delete</text>
 	  <text name="CreateNewgame">Create New game</text>
 	  <text name="Game">Game</text>
+	  <text name="Version">Version</text>
+	  <text name="version">version</text>
+	  <text name="Action">Action</text>
 
     <text name="AreYouSure">Are you sure?</text>
   </texts>

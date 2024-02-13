@@ -4,6 +4,7 @@ using Abp.DynamicEntityProperties;
 using Abp.Zero.EntityFramework;
 using TestDemo.Authorization.Roles;
 using TestDemo.Authorization.Users;
+using TestDemo.Department;
 using TestDemo.Games;
 using TestDemo.Migrations;
 using TestDemo.MultiTenancy;
@@ -20,6 +21,7 @@ namespace TestDemo.EntityFramework
          *   pass connection string name to base classes. ABP works either way.
          */
         public virtual IDbSet<game> Games { get; set; }
+        public virtual IDbSet<department> Department { get; set; }
         public TestDemoDbContext()
             : base("Default")
         {
