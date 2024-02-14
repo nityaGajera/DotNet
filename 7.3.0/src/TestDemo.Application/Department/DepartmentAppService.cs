@@ -17,7 +17,7 @@ namespace TestDemo.Department
 
         public DepartmentAppService(IRepository<department> DepartmentRepository)
         {
-            _DepartmentRepository = DepartmentRepository;
+            
         }
         public List<DepartmentDto> GetDepartmentData()
         {

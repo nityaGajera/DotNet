@@ -250,6 +250,11 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Branch\BranchAppService.cs" />
+    <Compile Include="Branch\Dto\BindDepartmentDto.cs" />
+    <Compile Include="Branch\Dto\BranchDto.cs" />
+    <Compile Include="Branch\Dto\CreateBranchDto.cs" />
+    <Compile Include="Branch\IBranchAppService.cs" />
     <Compile Include="Department\DepartmentAppService.cs" />
     <Compile Include="Department\Dto\CreateDepartmentDto.cs" />
     <Compile Include="Department\Dto\DepartmentDto.cs" />

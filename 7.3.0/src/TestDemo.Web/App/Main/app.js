@@ -68,8 +68,13 @@
                 })
                 .state('Department', {
                     url: '/department',
-                    templateUrl: '/App/Main/views/department/indexd.cshtml',
+                    templateUrl: '/App/Main/views/department/index.cshtml',
                     menu: 'Department' //Matches to name of 'About' menu in TestDemoNavigationProvider
+                })
+                .state('Branch', {
+                    url: '/branch',
+                    templateUrl: '/App/Main/views/branch/index.cshtml',
+                    menu: 'branch' //Matches to name of 'About' menu in TestDemoNavigationProvider
                 });
         }
     ]);

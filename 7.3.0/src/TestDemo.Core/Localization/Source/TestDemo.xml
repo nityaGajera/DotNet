@@ -28,8 +28,11 @@
     <text name="Name" value="Name" />
     <text name="Surname" value="Surname" />
     <text name="EmailAddress" value="Email address" />
+	  <text name="Department" value="department" />
+	  <text name="Create newdepartment" value="Create newdepartment" />
 
-    <text name="Tenants" value="Tenants" />
+
+	  <text name="Tenants" value="Tenants" />
     <text name="SavedSuccessfully" value="Saved successfully" />
     <text name="CreateNewTenant" value="Create new tenant" />
     <text name="AdminEmailAddress" value="Admin email address" />

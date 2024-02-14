@@ -1,8 +1,8 @@
 ﻿(function () {
     var myApp = angular.module('app');
-    myApp.controller('app.views.department.editd', [
+    myApp.controller('app.views.department.edit', [
         '$scope', '$uibModalInstance', 'abp.services.app.department', 'id',
-        function ($scope, $uibModalInstance, department, id) {
+        function ($scope, $uibModalInstance, departmentService, id) {
             var vm = this;
             vm.department = {};
 
@@ -31,7 +31,7 @@
             }
             vm.save = function () {
 
-                departmentService.UpdateDepartment(vm.department)
+                departmentService.updateDepartment(vm.department)
                     .then(function () {
                         abp.notify.info(App.localize('SavedSuccessfully'));
                         $uibModalInstance.close();

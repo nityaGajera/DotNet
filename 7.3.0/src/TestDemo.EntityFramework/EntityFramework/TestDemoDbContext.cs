@@ -4,10 +4,12 @@ using Abp.DynamicEntityProperties;
 using Abp.Zero.EntityFramework;
 using TestDemo.Authorization.Roles;
 using TestDemo.Authorization.Users;
+using TestDemo.Branch;
 using TestDemo.Department;
 using TestDemo.Games;
 using TestDemo.Migrations;
 using TestDemo.MultiTenancy;
+using branch = TestDemo.Branch.branch;
 
 namespace TestDemo.EntityFramework
 {
@@ -22,6 +24,7 @@ namespace TestDemo.EntityFramework
          */
         public virtual IDbSet<game> Games { get; set; }
         public virtual IDbSet<department> Department { get; set; }
+        public virtual IDbSet<branch> Branches { get; set; }
         public TestDemoDbContext()
             : base("Default")
         {

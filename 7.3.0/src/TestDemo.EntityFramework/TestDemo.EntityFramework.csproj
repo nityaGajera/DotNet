@@ -283,6 +283,10 @@
     <Compile Include="Migrations\202402130518599_xyz.designer.cs">
       <DependentUpon>202402130518599_xyz.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202402140602047_branch.cs" />
+    <Compile Include="Migrations\202402140602047_branch.designer.cs">
+      <DependentUpon>202402140602047_branch.cs</DependentUpon>
+    </Compile>
     <Compile Include="TestDemoDataModule.cs" />
     <Compile Include="Migrations\201809270654064_InitialMigrations.cs" />
     <Compile Include="Migrations\201809270654064_InitialMigrations.Designer.cs">
@@ -442,6 +446,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202402130518599_xyz.resx">
       <DependentUpon>202402130518599_xyz.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202402140602047_branch.resx">
+      <DependentUpon>202402140602047_branch.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

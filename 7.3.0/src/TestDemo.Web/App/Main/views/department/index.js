@@ -5,15 +5,15 @@
             var vm = this;
             vm.department = [];
             function getdepartment() {
-                gameService.getDepartmentData()
+                departmentService.getDepartmentData()
                     .then(function (result) {
                         vm.department = result.data;
-                });
+                    });
             }
 
             vm.opendepartmentCreate = function () {
                 var modalInstance = $uibModal.open({
-                    templateUrl: '/App/Main/views/department/Create.cshtml',
+                    templateUrl: '/App/Main/views/department/create.cshtml',
                     controller: 'app.views.department.create as vm',
                     backdrop: 'static'
                 });
@@ -32,7 +32,7 @@
             vm.opendepartmentEdit = function (department) {
                 var modalInstance = $uibModal.open({
                     templateUrl: '/App/Main/views/department/edit.cshtml',
-                    controller: 'app.views.game.edit as vm',
+                    controller: 'app.views.department.edit as vm',
                     backdrop: 'static',
                     resolve: {
                         id: function () {
