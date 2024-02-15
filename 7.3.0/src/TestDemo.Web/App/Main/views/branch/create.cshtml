@@ -6,22 +6,23 @@
                     <h2>
                         @L("Branch")
                     </h2>
-                    <i class="fa fa-spin fa-spinner" ng-if="vm.isTableLoading"></i>
+                  
                     <ul class="header-dropdown m-r--5">
                         <li class="dropdown">
-                            <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                            @*<a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
                                 <i class="material-icons">more_vert</i>
-                            </a>
-                            <ul class="dropdown-menu pull-right">
+                            </a>*@
+                            @*<ul class="dropdown-menu pull-right">
                                 <li><a href="javascript:void(0);" class="waves-effect waves-block()" ng-click="vm.refresh();"><i class="material-icons">refresh</i> @L("Refresh")</a></li>
-                            </ul>
+                            </ul>*@
                         </li>
                     </ul>
                 </div>
                 <div class="body table-responsive">
+                    <input id="name" type="text" name="name" ng-model="vm.branch.name" maxlength="32" minlength="2" class="validate form-control">
                     <div class="form-group">
-                        <label for="companyDropdown">Branch:</label>
-                        <select id="ddlproject" ui-select2 class="form-control" ng-model="vm.branch.departmentId">
+                        <label for="ddlproject">Branch:</label>
+                        <select id="ddlproject" class="form-control" ng-model="vm.branch.departmentId">
                             <option value="">Select Branch</option>
                             <option ng-repeat="nitya in  vm.department" value="{{ nitya.id }}">{{ nitya.name }}</option>
                         </select>
@@ -35,6 +36,6 @@
             @L("Cancel")
         </button>
         <button type="submit" class="btn btn-primary waves-effect" ng-click="vm.save()">
-            @L("Save")
+            @("save")
         </button>
     </div>

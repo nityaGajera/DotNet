@@ -1,7 +1,7 @@
 ﻿(function () {
     angular.module('app').controller('app.views.branch.create', [
-        '$scope', '$uibModalInstance', 'abp.services.app.branch',
-        function ($scope, $uibModalInstance, branchService) {
+        '$scope', '$uibModal', 'abp.services.app.branch',
+        function ($scope, $uibModal, branchService) {
             var vm = this;
             vm.branch = {};
             vm.department = [];
@@ -16,14 +16,14 @@
             vm.save = function () {
                 branchService.createBranch(vm.branch).then(function () {
                     abp.notify.info(App.localize('SavedSuccessfully'));
-                    $uibModalInstance.close();
+                    $uibModal.close();
 
                 }).finally(function () {
                     vm.saving = false;
                 });
             };
             vm.cancel = function () {
-                $uibModalInstance.dismiss();
+                $uibModal.dismiss();
             };
             function init() {
                 getdepartment();

@@ -5,9 +5,6 @@
             var vm = this;
             vm.department = {};
 
-
-
-
             vm.save = function () {
                 departmentService.createDepartment(vm.department).then(function () {
                     abp.notify.info(App.localize('SavedSuccessfully'));

@@ -11,6 +11,9 @@ namespace TestDemo.Branch
     [Table("Branch")]
     public class branch : FullAuditedEntity
     {
-        public virtual string Name { get; set; }
+
+        public virtual int Name { get; set; }
+
+        public virtual int Id { get; set; }
     }
 }

@@ -4,6 +4,7 @@
         function ($scope, $timeout, $uibModal, branchService) {
             var vm = this;
             vm.branch = [];
+
             function getbranch() {
                 branchService.getBranchData()
                     .then(function (result) {
@@ -29,26 +30,6 @@
                 });
 
             };
-            
-            //vm.deletedata = function (item) {
-            //    debugger;
-
-            //    abp.message.confirm(
-            //        "Delete Test '" + item.name + "'?",
-            //        //"Delete Test '" + item.version + "'?",
-            //        "Delete?",
-            //        function (result) {
-            //            if (result) {
-
-            //                gameService.deleteGame({ id: item.id })
-            //                    .then(function () {
-            //                        abp.notify.info("Deleted Game is: " + item.name);
-            //                        debugger;
-            //                        getgame();
-            //                    });
-            //            }
-            //        });
-            //};
 
             function init() {
                 getbranch();
