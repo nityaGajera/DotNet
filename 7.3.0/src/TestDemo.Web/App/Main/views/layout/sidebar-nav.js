@@ -15,6 +15,7 @@
                 createMenuItem(App.localize("Game"), "", "info", "game"),
                 createMenuItem(App.localize("Department"), "", "info", "Department"),
                 createMenuItem(App.localize("Branch"), "", "info", "Branch"),
+                createMenuItem(App.localize("car"), "", "info", "Car"),
 
                 createMenuItem(App.localize("MultiLevelMenu"), "", "menu", "", [
                     createMenuItem("ASP.NET Boilerplate", "", "", "", [

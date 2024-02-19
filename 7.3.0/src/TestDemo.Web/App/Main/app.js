@@ -75,6 +75,11 @@
                     url: '/branch',
                     templateUrl: '/App/Main/views/branch/index.cshtml',
                     menu: 'branch' //Matches to name of 'About' menu in TestDemoNavigationProvider
+                })
+                .state('Car', {
+                    url: '/car',
+                    templateUrl: '/App/Main/views/car/index.cshtml',
+                    menu: 'car' //Matches to name of 'About' menu in TestDemoNavigationProvider
                 });
         }
     ]);

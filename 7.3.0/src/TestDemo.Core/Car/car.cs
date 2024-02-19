@@ -6,14 +6,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace TestDemo.Branch
+namespace TestDemo.Car
 {
-    [Table("Branch")]
-    public class branch : FullAuditedEntity
+    [Table("Car")]
+    public class car : FullAuditedEntity
     {
 
         public virtual string Name { get; set; }
 
         public virtual int Id { get; set; }
+
     }
 }

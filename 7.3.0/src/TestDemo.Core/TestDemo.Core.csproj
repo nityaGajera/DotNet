@@ -240,6 +240,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Branch\branch.cs" />
+    <Compile Include="Car\car.cs" />
     <Compile Include="Department\department.cs" />
     <Compile Include="Games\game.cs" />
     <Compile Include="TestDemoConsts.cs" />

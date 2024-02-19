@@ -530,6 +530,9 @@
     <Content Include="App\Main\services\appSession.js" />
     <Content Include="App\Main\views\branch\create.js" />
     <Content Include="App\Main\views\branch\index.js" />
+    <Content Include="App\Main\views\car\create.js" />
+    <Content Include="App\Main\views\car\edit.js" />
+    <Content Include="App\Main\views\car\index.js" />
     <Content Include="App\Main\views\department\create.js" />
     <Content Include="App\Main\views\department\edit.js" />
     <Content Include="App\Main\views\department\index.js" />
@@ -2789,6 +2792,9 @@
     <Content Include="App\Main\views\department\create.cshtml" />
     <Content Include="App\Main\views\branch\index.cshtml" />
     <Content Include="App\Main\views\branch\create.cshtml" />
+    <Content Include="App\Main\views\car\index.cshtml" />
+    <Content Include="App\Main\views\car\create.cshtml" />
+    <Content Include="App\Main\views\car\edit.cshtml" />
     <None Include="bundleconfig.json" />
     <None Include="compilerconfig.json" />
     <None Include="compilerconfig.json.defaults">

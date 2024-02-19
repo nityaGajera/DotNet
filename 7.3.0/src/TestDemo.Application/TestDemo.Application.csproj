@@ -255,6 +255,10 @@
     <Compile Include="Branch\Dto\BranchDto.cs" />
     <Compile Include="Branch\Dto\CreateBranchDto.cs" />
     <Compile Include="Branch\IBranchAppService.cs" />
+    <Compile Include="Car\CarAppService.cs" />
+    <Compile Include="Car\Dto\CarDto.cs" />
+    <Compile Include="Car\Dto\CreateCarDto.cs" />
+    <Compile Include="Car\ICarAppService.cs" />
     <Compile Include="Department\DepartmentAppService.cs" />
     <Compile Include="Department\Dto\CreateDepartmentDto.cs" />
     <Compile Include="Department\Dto\DepartmentDto.cs" />

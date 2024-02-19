@@ -291,6 +291,14 @@
     <Compile Include="Migrations\202402150618095_kvf.designer.cs">
       <DependentUpon>202402150618095_kvf.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202402190654204_ccc.cs" />
+    <Compile Include="Migrations\202402190654204_ccc.designer.cs">
+      <DependentUpon>202402190654204_ccc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202402190711145_car.cs" />
+    <Compile Include="Migrations\202402190711145_car.designer.cs">
+      <DependentUpon>202402190711145_car.cs</DependentUpon>
+    </Compile>
     <Compile Include="TestDemoDataModule.cs" />
     <Compile Include="Migrations\201809270654064_InitialMigrations.cs" />
     <Compile Include="Migrations\201809270654064_InitialMigrations.Designer.cs">
@@ -456,6 +464,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202402150618095_kvf.resx">
       <DependentUpon>202402150618095_kvf.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202402190654204_ccc.resx">
+      <DependentUpon>202402190654204_ccc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202402190711145_car.resx">
+      <DependentUpon>202402190711145_car.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

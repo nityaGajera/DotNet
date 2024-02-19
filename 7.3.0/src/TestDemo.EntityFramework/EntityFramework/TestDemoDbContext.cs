@@ -10,6 +10,7 @@ using TestDemo.Games;
 using TestDemo.Migrations;
 using TestDemo.MultiTenancy;
 using branch = TestDemo.Branch.branch;
+using car = TestDemo.Car.car;
 
 namespace TestDemo.EntityFramework
 {
@@ -25,6 +26,8 @@ namespace TestDemo.EntityFramework
         public virtual IDbSet<game> Games { get; set; }
         public virtual IDbSet<department> Department { get; set; }
         public virtual IDbSet<branch> Branches { get; set; }
+        public virtual IDbSet<car> Cars { get; set; }
+
         public TestDemoDbContext()
             : base("Default")
         {
